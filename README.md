@@ -1,128 +1,129 @@
-# Skele Gamer Qt6
 
-Personal SDDM theme repo for `skele-gamer-qt6`.
 
-This theme is a neon cyber / skeleton gamer style SDDM login theme with:
-- Qt6-based theme metadata
-- looping video background
-- neon pink and purple UI accents
-- custom font bundled in the theme
+<p align="center">
+<pre align="center">
+<a href="#setup">sᴇᴛᴜᴘ​​</a>  •  <a href="#themes">​ᴛʜᴇᴍᴇs​</a>  •  <a href="#gallery">​ɢᴀʟʟᴇʀʏ</a>  •  <a href="#credits">​ᴄʀᴇᴅɪᴛs</a>
+</pre>
+</p>
 
-![Skele Gamer Qt6](./screenshot.png)
+<img id="header" align="center" src="./Assets/title.png" alt="SDDM Themes" width="100%" style="border-radius: 10px; margin-top: 20px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 
-## Repository Layout
 
-[`skele-gamer-qt6`](/home/rabbit/Documents/sddm-themes/skele-gamer-qt6)
+<div align="left">
+  <a href="https://github.com/sddm/sddm"><img src="https://img.shields.io/badge/SDDM-000000?style=for-the-badge&logo=linux&logoColor=white" align="left"/></a>
+  <a href="https://www.qt.io"><img src="https://img.shields.io/badge/QT_QML-000000?style=for-the-badge&logo=qt&logoColor=white" align="left"/></a>
+  
+  <div align="right">
+    <details>
+      <summary>☕ sᴜᴘᴘᴏʀᴛ ᴍʏ ᴡᴏʀᴋ</summary>
+      <p align="right">
+        <br>
+        <img src="https://img.shields.io/badge/UPI-abhaydevka169%40okicici-00BFFF?style=for-the-badge&logo=google-pay&logoColor=white"/>
+        <br><br>
+        <i>Means a lot, tysm <3</i>
+      </p>
+    </details>
+  </div>
+</div>
 
-Contains the actual SDDM theme:
-- [`Main.qml`](/home/rabbit/Documents/sddm-themes/skele-gamer-qt6/Main.qml)
-- [`BackgroundVideo.qml`](/home/rabbit/Documents/sddm-themes/skele-gamer-qt6/BackgroundVideo.qml)
-- [`theme.conf`](/home/rabbit/Documents/sddm-themes/skele-gamer-qt6/theme.conf)
-- [`metadata.desktop`](/home/rabbit/Documents/sddm-themes/skele-gamer-qt6/metadata.desktop)
-- [`bg.mp4`](/home/rabbit/Documents/sddm-themes/skele-gamer-qt6/bg.mp4)
-- [`preview.png`](/home/rabbit/Documents/sddm-themes/skele-gamer-qt6/preview.png)
+---
 
-## Dependencies
+<br>
 
-Required:
-- `sddm`
-- `qt6-wayland`
-- `xcb-util-cursor`
+### ✦ ᴏᴠᴇʀᴠɪᴇᴡ
+A simple collection of all the SDDM themes I've made. It comes with an automated dependency installer and a theme changer script so you don't have to worry about moving files manually. 
 
-Recommended:
-- `ffmpeg`
+<br>
 
-Notes:
-- This theme is marked with `QtVersion=6` and is intended for the Qt6 greeter path.
-- If your distro ships an SDDM Wayland override that is unstable on your machine, forcing SDDM back to X11 may be more reliable.
+---
 
-## Install
+<div align="center">
+  <h2 id="setup"> ⚙️ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ ⚙️ </h2>
+</div>
 
-Copy the theme into SDDM's theme directory:
+### ⚡ ᴛʜᴇ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ᴘᴀᴛʜ (ᴀʀᴄʜ ʟɪɴᴜx)
 
-```bash
-sudo rm -rf /usr/share/sddm/themes/skele-gamer-qt6
-sudo cp -r ./skele-gamer-qt6 /usr/share/sddm/themes/
+> [!TIP]
+> **Recommended:** Use the provided scripts to handle everything. The `setup.sh` script is not just for installation—you can run it anytime to quickly switch between themes.
+
+```sh
+# 1. Install required dependencies
+chmod +x "install_dependencies(arch).sh"
+./"install_dependencies(arch).sh"
+
+# 2. Select and apply your theme
+chmod +x setup.sh
+./setup.sh
 ```
 
-Set it as the active theme:
+> [!IMPORTANT]
+> The `setup.sh` script works best with `fzf` installed, but will fallback to a simple list if needed.
 
-```bash
-sudo mkdir -p /etc/sddm.conf.d
-printf '[Theme]\nCurrent=skele-gamer-qt6\n' | sudo tee /etc/sddm.conf.d/theme.conf >/dev/null
+<br>
+
+### ⚡ ᴛʜᴇ ᴍᴀɴᴜᴀʟ ᴘᴀᴛʜ
+
+If you're on another distro or just want to do it yourself:
+
+**1. Install Dependencies:**
+Make sure you have these (names might differ on your distro):
+- `sddm`, `qt5-graphicaleffects`, `qt5-multimedia`, `qt5-quickcontrols`, `qt5-quickcontrols2`, `qt5-svg`
+
+**2. Use the Setup Script:**
+Simply run the interactive script to select and apply your themes. As long as you have the dependencies, this will handle the rest.
+```sh
+chmod +x setup.sh
+./setup.sh
 ```
 
-Restart SDDM:
+<br>
 
-```bash
-sudo systemctl restart sddm
-```
+---
 
-## Optional: Force X11 For SDDM
+<div align="center">
+  <h2 id="themes"> ◈ ᴛʜᴇ ᴄᴏʟʟᴇᴄᴛɪᴏɴ ◈ </h2>
+  <p>Explore the diverse styles available in this repository.</p>
+</div>
 
-If your machine has problems with the vendor Wayland greeter config, add:
+| Theme | Description |
+| :--- | :--- |
+| **NieR: Automata** | A faithful UI recreation of the game NieR: Automata. |
+| **Cozytile** | A theme for my rice cozytile.|
+| **Terraria** | A UI recreation of the game Terraria.|
+| **Cyberpunk** | A UI recreation of the game Cyberpunk 2077.|
+| **TUI** | A minimal, terminal-inspired aesthetic for the command-line lovers. |
+| **Minecraft** | A UI recreation of the game Minecraft.|
+| **Windows 7** | A pixel-perfect recreation of windows 7 lockscreen.|
+| **Paper** | Clean, flat, and modern material design. |
+| **Enfield** | Sophisticated and elegant typography-focused theme. |
+| **Porsche** | Sleek, high-performance aesthetics for automotive fans. |
+| **Sword** | Sharp, minimal, and striking theme. |
 
-```bash
-sudo mkdir -p /etc/sddm.conf.d
-sudo tee /etc/sddm.conf.d/10-displayserver.conf >/dev/null <<'EOF'
-[General]
-DisplayServer=x11
-GreeterEnvironment=
-EOF
-```
+<br>
 
-Then restart SDDM:
+---
 
-```bash
-sudo systemctl restart sddm
-```
+<div align="center">
+  <h2 id="gallery"> ✦ ꜱɴᴀᴘꜱʜᴏᴛꜱ ✦ </h2>
+  <p><i>Under work..</i></p>
+</div>
 
-## Edit Workflow
 
-Edit the source theme in this repo:
+<br>
 
-[`skele-gamer-qt6`](/home/rabbit/Documents/sddm-themes/skele-gamer-qt6)
+---
 
-Then copy it over the installed theme:
+<div align="center">
+  <h2 id="credits"> ☕ ᴄʀᴇᴅɪᴛꜱ ᴀɴᴅ ɢʀᴀᴛɪᴛᴜᴅᴇ ☕ </h2>
+</div>
 
-```bash
-sudo rm -rf /usr/share/sddm/themes/skele-gamer-qt6
-sudo cp -r ./skele-gamer-qt6 /usr/share/sddm/themes/
-```
+* **Pumphium** -  A huge thanks to this lil guy for helping me with the theme suggestions and debugging with me.
+* **Qt/QML Community** — For the powerful framework that makes these themes possible.
+* **Unixporn** — For the aesthetic inspiration and feedback.
 
-## Video Background Tips
+---
 
-Create a more vivid neon 1080p version:
-
-```bash
-ffmpeg -i ./skele-gamer-qt6/bg.mp4 \
-  -vf "scale=1920:1080:flags=lanczos,eq=saturation=1.38:contrast=1.12:brightness=0.015:gamma=1.03,unsharp=5:5:1.1:3:3:0.5" \
-  -c:v libx264 -crf 16 -preset slow -pix_fmt yuv420p \
-  -c:a copy \
-  ./skele-gamer-qt6/bg-neon-1080p.mp4
-```
-
-Regenerate the preview image from the current video:
-
-```bash
-ffmpeg -y -i ./skele-gamer-qt6/bg.mp4 -frames:v 1 ./skele-gamer-qt6/preview.png
-```
-
-## Troubleshooting
-
-If the screen goes black:
-- switch to a TTY with `Ctrl+Alt+F2`
-- log in
-- switch back to Breeze:
-
-```bash
-printf '[Theme]\nCurrent=breeze\n' | sudo tee /etc/sddm.conf.d/theme.conf >/dev/null
-sudo systemctl restart sddm
-```
-
-If the theme does not render with the Qt6 greeter:
-- verify [`metadata.desktop`](/home/rabbit/Documents/sddm-themes/skele-gamer-qt6/metadata.desktop) contains `QtVersion=6`
-
-## License
-
-MIT. See [`LICENSE`](/home/rabbit/Documents/sddm-themes/LICENSE).
+<div align="center">
+  <br>
+  <p><i>Make your login your own. Stay ricey.</i></p>
+</div>
